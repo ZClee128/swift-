@@ -44,6 +44,13 @@ class ViewController: UIViewController {
             print(err)
             }).disposed(by: dispose)
         
+        myviewModel.uploadimag(images: Data()).subscribe(onNext: { (str) in
+            print(str)
+        }, onError: { (err) in
+            print(err)
+            }).disposed(by: dispose)
+        
+        
     }
     
     

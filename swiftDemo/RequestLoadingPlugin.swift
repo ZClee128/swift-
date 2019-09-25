@@ -37,10 +37,11 @@ class RequestLoadingPlugin: PluginType {
     }
     
     func willSend(_ request: RequestType, target: TargetType) {
-        print("开始请求")
+        print("开始请求-------\(request)")
     }
     
     func didReceive(_ result: Result<Response, MoyaError>, target: TargetType) {
+        print("结束请求--------\(target)")
         switch result {
         case .success(let response):
             print(String(data: response.data, encoding: .utf8)!)
