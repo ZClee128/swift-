@@ -11,7 +11,7 @@ import Moya
 
 class ApiTask: NSObject {
     func login() -> Task{
-        return Moya.Task.requestData(jsonToData(jsonDic: ["appVersion": "1.1.0" , "appSysType": "2"], targetType: .login)!)
+        return Moya.Task.requestData(jsonToData(jsonDic: ["username": "lzc" , "password": "2ddd"], targetType: .login)!)
     }
     
     func uploadImage(image: Data) -> Task {

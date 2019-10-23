@@ -20,13 +20,13 @@ enum XQCApi {
 
 extension XQCApi:TargetType {
     public var baseURL: URL {
-        return URL.init(string: "http://172.16.4.4/api")!
+        return URL.init(string: "http://127.0.0.1:8080")!
     }
     
     public var path: String {
         switch self {
         case .login:
-            return "/api-app/setting/getAppVersion"
+            return "/Login"
         case .uploadImage(_):
             return "/api-oss/oss/uploadToFolder"
         }
